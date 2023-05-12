@@ -8,6 +8,9 @@ GFG Deliveries allows a player to interact with any number of delivery services 
 * Highly Configurable.
 * Optimized (Running at 0.00ms).
 
+## Discord
+[Discord](https://discord.com/invite/76Z5Fup4Ms)
+
 ## Docs
 [Docs](https://gfg-development.gitbook.io/gfg-development/free-resources/gfg_deliveries)
 
