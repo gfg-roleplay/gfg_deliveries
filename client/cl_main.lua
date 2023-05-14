@@ -205,7 +205,15 @@ function startJob(pedType, deliveryType)
     debug_print("Dropoff Count: "..dropoffsAssigned, 1)
 
     -- Gives keys
+    if Config.inventory == "qb_inventory" then
+        local source = source
+        local plate = vehiclePlate
+        
+        TriggerEvent("vehiclekeys:client:SetOwner", GetVehicleNumberPlateText(truck))
+       else
     TriggerServerEvent('gfg_deliveries:server:giveKeys', GetVehicleNumberPlateText(truck))
+    end
+
 
     distance = 0
     dropoffCount = 0
@@ -255,7 +263,7 @@ function getDropoff()
     SetBlipScale(dropoffBlip, scale)
     SetBlipHiddenOnLegend(dropoffBlip, false)
     SetBlipRoute(dropoffBlip, true)
-    SetBlipDisplay(dropoffBlip, 8)
+    SetBlipDisp lay(dropoffBlip, 8)
     BeginTextCommandSetBlipName("STRING")
     AddTextComponentSubstringPlayerName(string.format(Lang('dropoffBlip'), dropoffCount))
     EndTextCommandSetBlipName(blip)
