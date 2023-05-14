@@ -205,7 +205,14 @@ function startJob(pedType, deliveryType)
     debug_print("Dropoff Count: "..dropoffsAssigned, 1)
 
     -- Gives keys
+    if Config.inventory == "qb_inventory" then
+        local source = source
+        local plate = vehiclePlate
+
+        TriggerEvent("vehiclekeys:client:SetOwner", GetVehicleNumberPlateText(truck))
+       else
     TriggerServerEvent('gfg_deliveries:server:giveKeys', GetVehicleNumberPlateText(truck))
+    end
 
     distance = 0
     dropoffCount = 0
